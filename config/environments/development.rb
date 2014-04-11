@@ -26,4 +26,11 @@ PeerDocReview::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  ##config.ember.variant - Used to determine which Ember variant to use. Valid options: :development, :production.
+  #config.ember.app_name - Used to specify a default application name for all generators.
+  #config.ember.ember_path - Used to specify a default custom root path for all generators.
+  #config.handlebars.precompile - Used to enable or disable precompilation. Default value: true.
+  #config.handlebars.templates_root - Set the root path (under app/assets/javascripts) for templates to be looked up in. Default value: "templates".
+  #config.handlebars.templates_path_separator - The path separator to use for templates. Default value: '/'.
+  #config.handlebars.output_type - Configures the style of output (options are :amd and :global). Default value: :global.
 end
