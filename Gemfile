@@ -43,7 +43,7 @@ gem 'ember-source', '1.5.0' # or the version you need
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use unicorn as the app server
+# Use unicorn as the app serverc
 gem 'unicorn'
 
 # Use Capistrano for deployment
@@ -51,4 +51,9 @@ gem 'unicorn'
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
+gem 'pry-rails', group: [:development, :test]
 gem 'rspec-rails', '~> 3.0.0.beta', group: [:development, :test]
+
+gem 'therubyracer'
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
