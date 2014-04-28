@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
-# Use sqlite3 as the database for Active Record
+# Use sqlite3 as the Adatabase for Active Record
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
@@ -18,7 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript librar
+# Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -35,7 +35,7 @@ end
 gem 'ember-rails'
 
 gem 'ember-source', '1.5.0' # or the version you need
-
+gem 'pg'
 
 
 
@@ -53,7 +53,9 @@ gem 'unicorn'
 gem 'debugger', group: [:development, :test]
 gem 'pry-rails', group: [:development, :test]
 gem 'rspec-rails', '~> 3.0.0.beta', group: [:development, :test]
+# gem 'Data', '~> 3.0.0.beta', group: [ :test]
 
 gem 'therubyracer'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+gem "twitter-bootstrap-rails", :github => 'seyhunak/twitter-bootstrap-rails', :branch => 'bootstrap3'
+gem 'bourbon'
