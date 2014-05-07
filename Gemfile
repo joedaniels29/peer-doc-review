@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
-
+gem 'rails-api'
 # Use sqlite3 as the Adatabase for Active Record
 gem 'sqlite3'
 
@@ -34,11 +34,8 @@ group :doc do
 end
 #ember!
 gem 'ember-rails'
-
 gem 'ember-source', '1.5.0' # or the version you need
 gem 'pg'
-
-
 
 
 # Use ActiveModel has_secure_password
@@ -51,12 +48,34 @@ gem 'unicorn'
 # gem 'capistrano', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
-gem 'pry-rails', group: [:development, :test]
-gem 'rspec-rails', '~> 3.0.0.beta', group: [:development, :test]
+group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem "factory_girl_rails", '~> 4.0'
+  gem 'database_cleaner'
+end
 # gem 'Data', '~> 3.0.0.beta', group: [ :test]
 
 gem 'therubyracer'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails", :github => 'seyhunak/twitter-bootstrap-rails', :branch => 'bootstrap3'
 gem 'bourbon'
+
+
+gem 'ember-auth-rails'
+gem 'ember-auth-source' # semver
+gem 'ember-auth-request-jquery-rails'
+gem 'ember-auth-request-jquery-source' # semver
+gem 'ember-auth-strategy-token-rails'
+gem 'ember-auth-strategy-token-source' # semver
+gem 'ember-auth-session-cookie-rails'
+gem 'ember-auth-session-cookie-source' # semver
+gem 'ember-auth-module-rememberable-rails'
+gem 'ember-auth-module-rememberable-source' # semver
+gem 'ember-auth-module-auth_redirectable-rails'
+gem 'ember-auth-module-auth_redirectable-source' # semver
+
+
+
+gem 'bcrypt'
+

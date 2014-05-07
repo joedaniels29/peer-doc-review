@@ -1,5 +1,5 @@
 #= require ./store
-#= require ./auth_manager
+#= require ./initializers
 #= require_tree ./models
 #= require_tree ./controllers
 #= require_tree ./views

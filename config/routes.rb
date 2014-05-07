@@ -1,6 +1,10 @@
 PeerDocReview::Application.routes.draw do
 
-  resources :users, except: [:new, :edit, :destroy]
+  post 'sign-in', to:'users#sign_in'
+  delete 'sign-out', to:'users#sign_out'
+
+
+  resources :users, except:[:destroy]
   post 'session' => 'session#create'
   root "index#index"
 end

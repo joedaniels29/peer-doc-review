@@ -1,9 +1,9 @@
 # for more details see: http://emberjs.com/guides/models/defining-models/
 
-PeerDocReview.Document = DS.Model.extend()
+App.Document = DS.Model.extend()
   title: DS.attr(),
-  author: DS.belongsTo('user'),
-  reviewer: DS.belongsTo('user'),
+  author: DS.belongsTo('user',{inverse: 'documents'}),
+  reviewer: DS.belongsTo('user',{inverse: 'reviews_written'}),
   rating: DS.attr('number'),
 
   subject: DS.belongsTo('subject'),

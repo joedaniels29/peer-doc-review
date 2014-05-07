@@ -1,0 +1,27 @@
+<h2>Login</h2>
+
+<form {{action 'authenticate' on='submit'}}>
+    {{#if errors.message}}
+        <div class="alert alert-danger">{{errors.message}}</div>
+    {{/if}}
+    <div {{bind-attr class="errors.message:has-error"}}>
+        <div class="row">
+            <label class="col-sm-2 control-label">Username or Email</label>
+
+            <div class="col-sm-3 control-label">
+                {{input class="form-control" type="name" valueBinding='identification' placeholder="Username or Email Address" value=identification}}
+            </div>
+
+        </div>
+
+        <br/>
+
+        <div class="row">
+            <label class="col-sm-2 control-label">Password</label>
+
+            <div class="col-sm-3 control-label">{{input class="form-control" type="password" value=password placeholder="Password"}}</div>
+        </div>
+    </div>
+    <br/>
+    <button class="btn btn-info" type="submit">Submit</button>
+</form>
