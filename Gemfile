@@ -62,18 +62,7 @@ gem "twitter-bootstrap-rails", :github => 'seyhunak/twitter-bootstrap-rails', :b
 gem 'bourbon'
 
 
-gem 'ember-auth-rails'
-gem 'ember-auth-source' # semver
-gem 'ember-auth-request-jquery-rails'
-gem 'ember-auth-request-jquery-source' # semver
-gem 'ember-auth-strategy-token-rails'
-gem 'ember-auth-strategy-token-source' # semver
-gem 'ember-auth-session-cookie-rails'
-gem 'ember-auth-session-cookie-source' # semver
-gem 'ember-auth-module-rememberable-rails'
-gem 'ember-auth-module-rememberable-source' # semver
-gem 'ember-auth-module-auth_redirectable-rails'
-gem 'ember-auth-module-auth_redirectable-source' # semver
+gem 'ember_simple_auth-rails'
 
 
 

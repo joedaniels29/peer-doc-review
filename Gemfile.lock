@@ -60,41 +60,6 @@ GEM
     commonjs (0.2.7)
     database_cleaner (1.2.0)
     diff-lcs (1.2.5)
-    ember-auth-module-auth_redirectable-rails (1.0.0)
-      ember-auth-module-auth_redirectable-source
-      rails
-    ember-auth-module-auth_redirectable-source (1.0.3)
-      ember-auth-source (~> 9.0)
-      ember-source (~> 1.0)
-    ember-auth-module-rememberable-rails (1.0.0)
-      ember-auth-module-rememberable-source
-      rails
-    ember-auth-module-rememberable-source (1.0.3)
-      ember-auth-source (~> 9.0)
-      ember-source (~> 1.0)
-    ember-auth-rails (5.0.1)
-      ember-auth-source (>= 8.0.0)
-      rails
-    ember-auth-request-jquery-rails (1.0.0)
-      ember-auth-request-jquery-source
-      rails
-    ember-auth-request-jquery-source (1.0.3)
-      ember-auth-source (~> 9.0)
-      ember-source (~> 1.0)
-    ember-auth-session-cookie-rails (1.0.0)
-      ember-auth-session-cookie-source
-      rails
-    ember-auth-session-cookie-source (1.0.1)
-      ember-auth-source (~> 9.0)
-      ember-source (~> 1.0)
-    ember-auth-source (9.0.7)
-      ember-source (>= 1.0.0.rc6.2)
-    ember-auth-strategy-token-rails (1.0.0)
-      ember-auth-strategy-token-source
-      rails
-    ember-auth-strategy-token-source (1.0.2)
-      ember-auth-source (~> 9.0)
-      ember-source (~> 1.0)
     ember-data-source (0.14)
       ember-source
     ember-rails (0.14.1)
@@ -108,6 +73,8 @@ GEM
       railties (>= 3.1)
     ember-source (1.5.0)
       handlebars-source (~> 1.0)
+    ember_simple_auth-rails (0.3.1)
+      railties (> 3.1)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.4.0)
@@ -242,20 +209,9 @@ DEPENDENCIES
   bourbon
   coffee-rails (~> 4.0.0)
   database_cleaner
-  ember-auth-module-auth_redirectable-rails
-  ember-auth-module-auth_redirectable-source
-  ember-auth-module-rememberable-rails
-  ember-auth-module-rememberable-source
-  ember-auth-rails
-  ember-auth-request-jquery-rails
-  ember-auth-request-jquery-source
-  ember-auth-session-cookie-rails
-  ember-auth-session-cookie-source
-  ember-auth-source
-  ember-auth-strategy-token-rails
-  ember-auth-strategy-token-source
   ember-rails
   ember-source (= 1.5.0)
+  ember_simple_auth-rails
   factory_girl_rails (~> 4.0)
   jbuilder (~> 1.2)
   jquery-cookie-rails

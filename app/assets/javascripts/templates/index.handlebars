@@ -1,6 +1,6 @@
 <h1>Hi There, {{person}} </h1>
-{{#if isAuthenticated}}
-{{render "my_documents"}}
+{{#if session.isAuthenticated}}
+{{render "my_dash"}}
 {{else}}
 {{render "not_logged_in"}}
 {{/if}}

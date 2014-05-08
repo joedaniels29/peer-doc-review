@@ -7,11 +7,7 @@
 #= require handlebars
 #= require ember
 #= require ember-data
-#= require ember-auth
-#= require ember-auth-request-jquery
-#= require ember-auth-session-cookie
-#= require ember-auth-module-rememberable
-#= require ember-auth-module-auth-redirectable
+#= require ember-simple-auth
 ## Me:
 #= require_self
 #= require peer_doc_review
