@@ -54,6 +54,11 @@ group :development, :test do
   gem "factory_girl_rails", '~> 4.0'
   gem 'database_cleaner'
 end
+
+
+group :test do
+  gem 'lorem'
+end
 # gem 'Data', '~> 3.0.0.beta', group: [ :test]
 
 gem 'therubyracer'
@@ -63,8 +68,7 @@ gem 'bourbon'
 
 
 gem 'ember_simple_auth-rails'
-
-
+gem 'paperclip', github: 'thoughtbot/paperclip'
 
 gem 'bcrypt'
 

@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
   before_save :set_auth_token
-
+  has_many :documents
 
 
   validates_presence_of :name, :email

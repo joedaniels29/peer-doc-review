@@ -62,7 +62,10 @@ describe UsersController do
     describe 'with valid token', validToken: true do
       before(:each) { authWithUser(user) }
 
-      xit 'can upload a new Document'
+      it 'can upload a new Document' do
+        post 'create'
+      end
+
       pending 'show my documents'
       pending 'show documents that can be reviewed'
 

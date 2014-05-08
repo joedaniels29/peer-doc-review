@@ -3,8 +3,9 @@
 App.Document = DS.Model.extend()
   title: DS.attr(),
   author: DS.belongsTo('user',{inverse: 'documents'}),
-  reviewer: DS.belongsTo('user',{inverse: 'reviews_written'}),
-  rating: DS.attr('number'),
+#  reviews: DS.hasMany('review',{inverse: 'docuemnt'}),
+
+
 
   subject: DS.belongsTo('subject'),
   url:( ->
