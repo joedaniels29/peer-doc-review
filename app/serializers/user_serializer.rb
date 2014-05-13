@@ -3,5 +3,6 @@ class UserSerializer < ActiveModel::Serializer
   attributes :id, :email, :username, :name, :created_at, :updated_at
 
   has_many :documents
+  has_many :reviews
 
 end

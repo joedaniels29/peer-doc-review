@@ -16,7 +16,7 @@ App.DocumentsNewRoute = Ember.Route.extend({
     willTransition: (transition) ->
       if @currentModel.get("isNew")
        if confirm("Are you sure you want to abandon progress?")
-         @currentModel.review.destroyRecord()
+         @currentModel.destroyRecord()
        else
           transition.abort()
 })

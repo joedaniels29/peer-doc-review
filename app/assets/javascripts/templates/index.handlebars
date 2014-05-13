@@ -1,6 +1,6 @@
-<h1>Hi There, {{person}} </h1>
+<h1>Hi There, {{name}} </h1>
 {{#if session.isAuthenticated}}
-{{render "my_dash"}}
+{{partial "my_dash"}}
 {{else}}
 {{render "not_logged_in"}}
 {{/if}}

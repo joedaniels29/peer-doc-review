@@ -1,11 +1,11 @@
 <h1>{{name}}</h1>
 <h6>Username: {{username}}</h6>
-<h6>Email: {{username}}</h6>
+<h6>Email: {{email}}</h6>
 
 {{gravatar-image email=email size="200"}}
 <h3>Your reviews:</h3>
 {{#each  review in reviews}}
-    {{review-overview review= review}}
+    {{review-overview review = review}}
 {{else}}
     <p class="bg-info">No reviews to be found? write one or upload a document!</p>
 {{/each}}

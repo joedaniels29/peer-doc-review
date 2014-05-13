@@ -1,12 +1,6 @@
-<div class='col-sm-3'>
-    <p class='text-center rating'><strong>{{review.document.title}}</strong>/5</p>
-</div>
+<h3>{{#link-to 'user' review.reviewer}}{{review.reviewer.name}}'s Review{{/link-to}}</h3>
+<p class='text-muted'><em>{{created_at}}</em></p>
 
-<div class='col-sm-9'>
-    <h3>{{#link-to 'index' review}}{{review.title}}{{/link-to}}</h3>
-    <p class='text-muted'><em>{{created_at}}</em></p>
-
-    <div>
-        <p>{{review.content}}</p>
-    </div>
+<div>
+    <p>{{review.content}}</p>
 </div>

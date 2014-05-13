@@ -1,7 +1,7 @@
 {{document-details document=model}}
 <h4>Reviews</h4>
-{{#each reviews}}
-    {{review-overview  review = this}}
+{{#each  review in reviews}}
+    {{review-overview  review = review}}
 {{else}}
     <p class="bg-info">No reviews to be found!</p>
 {{/each}}

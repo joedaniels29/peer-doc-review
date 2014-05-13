@@ -75,7 +75,7 @@ describe UsersController do
         it 'allows me to upload my response'
       end
 
-      context 'once I\'ve reviewed some work,' doq
+      context 'once I\'ve reviewed some work,'
         pending 'shows reviews of my work with my first reviewing the work of someone else.'
       end
 

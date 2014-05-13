@@ -18,7 +18,7 @@ class DocumentsController < ApplicationController
 
 
   def index
-    render json: User.all, each_serializer: UserSerializer
+    render json: Document.all, each_serializer: DocumentSerializer
   end
 
   private

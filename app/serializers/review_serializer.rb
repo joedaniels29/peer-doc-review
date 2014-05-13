@@ -1,5 +1,7 @@
 class ReviewSerializer < ActiveModel::Serializer
-  attributes :id, :review, :reviewer_id, :document_id, :created_at, :updated_at, :file_url
+  attributes :id, :content, :reviewer_id, :document_id, :created_at, :updated_at, :file_url
+
+  embed :ids, include: true
 
   def file_url
     if object.file.present?
@@ -9,10 +11,9 @@ class ReviewSerializer < ActiveModel::Serializer
     end
   end
 
-  embed :ids, include: true
 
 
   has_one :document
-  has_one :reviewer
+  has_one :user =>:reviewer
 
 end

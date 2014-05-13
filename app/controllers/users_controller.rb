@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_filter :authenticate, :only => :sign_in
+  skip_before_filter :authenticate, :only => [:sign_in, :create]
 
   public
   # Returns list of users. This requires authorization

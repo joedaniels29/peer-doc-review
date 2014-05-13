@@ -2,8 +2,8 @@
 
 App.Document = DS.Model.extend
   name: DS.attr(),
-  createdAt: DS.attr('date'),
-  updatedAt: DS.attr('date'),
+  created_at: DS.attr('date'),
+  updated_at: DS.attr('date'),
   author: DS.belongsTo('user',{inverse: 'documents'}),
   fileUrl: DS.attr('string'),
   file: DS.attr('string'),

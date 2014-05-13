@@ -1,0 +1,8 @@
+<h3>Your recent documents:</h3>
+
+{{#each document in person.documents}}
+    {{document-overview document=document}}
+{{else}}
+    <p class="bg-info">No document to be found? Upload a document!</p>
+{{/each}}
+
