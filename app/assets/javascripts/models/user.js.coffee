@@ -5,6 +5,9 @@ App.User = DS.Model.extend
   email: DS.attr('string'),
   username: DS.attr('string'),
   documents: DS.hasMany('document',{async: true}),
+  createdAt: DS.attr('date'),
+  updatedAt: DS.attr('date'),
+
   errors: {}
 #  documents: DS.hasMany('document', {async: true})
 #  reviews_written: DS.hasMany('review', {async: true})

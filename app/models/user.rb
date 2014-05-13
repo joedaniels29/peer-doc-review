@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_secure_password
   before_save :set_auth_token
   has_many :documents,  foreign_key: :author_id, dependent: :destroy
+  has_many :reviews,  foreign_key: :reviewer_id, dependent: :destroy
 
 
   validates_presence_of :name, :email

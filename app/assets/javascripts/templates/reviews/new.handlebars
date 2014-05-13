@@ -1,0 +1,43 @@
+<h1>Create a new review:</h1>
+
+<h4>for:</h4>
+{{document-overview document=model.document}}
+
+<div class='row'>
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="document_author" class="col-sm-2 control-label">Reviewer:</label>
+            <div class="col-sm-9">
+                You!
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="document_author" class="col-sm-2 control-label">Author:</label>
+            <div class="col-sm-9">
+                {{model.document.author.name}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="document_review" class="col-sm-2 control-label">Content:</label>
+            <div class="col-sm-9">
+                {{textarea valueBinding="model.content" class="form-control" }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="document_review" class="col-sm-2 control-label">or File:</label>
+            <div class="col-sm-9">
+                {{input type="file" class="form-control"  placeholder="document" value= file}}
+
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default" {{action 'createDocument'}}>Save Document</button>
+            </div>
+        </div>
+    </form>
+</div>

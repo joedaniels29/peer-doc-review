@@ -1,4 +1,4 @@
 # for more details see: http://emberjs.com/guides/views/
 
 App.DocumentView = Ember.View.extend
-  templateName: 'document'
+  templateName: 'documents/document'

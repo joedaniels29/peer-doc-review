@@ -1,6 +1,6 @@
 class UserSerializer < ActiveModel::Serializer
   embed :ids, include: true
-  attributes :id, :email, :username, :name
+  attributes :id, :email, :username, :name, :created_at, :updated_at
 
   has_many :documents
 

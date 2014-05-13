@@ -1,0 +1,8 @@
+<div class="col-xs-12 col-sm-6 col-md-8"> {{document-overview document=document}}</div>
+<div class=".col-xs-6 .col-md-4">
+    {{#unless yourDocument}}
+    <button type="button" class="btn btn-info  btn-lg btn-block">
+        {{#link-to 'reviews.new'}}New Review{{/link-to}}
+    </button>
+    {{/unless}}
+</div>

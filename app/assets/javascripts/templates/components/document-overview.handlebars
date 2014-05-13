@@ -1,0 +1,21 @@
+<div class='col-sm-3'>
+    <h3 class='text-center rating'><strong>{{#link-to 'document' document.id}}{{document.name}}{{/link-to}}</strong></h3>
+</div>
+
+<div class='col-sm-9'>
+    <h3>{{#link-to 'index' review}}{{review.name}}{{/link-to}}</h3>
+
+    <p class='text-muted'><em>Created at: {{document.created_at}}</em></p>
+    <p class='text-muted'><em>Updated at: {{document.updated_at}}</em></p>
+    <p class='text-muted'><em>Reviews  #: {{document.reviews.length}}</em></p>
+
+    {{#if document.content}}
+        <div>
+            <p>{{document.content}}</p>
+        </div>
+    {{else}}
+        {{#if document.fileUrl}}
+            <a {{bind-attr href=document.fileUrl}} target="_blank"> File</a>
+        {{/if}}
+    {{/if}}
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509022749) do
+ActiveRecord::Schema.define(version: 20140513161828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,18 @@ ActiveRecord::Schema.define(version: 20140509022749) do
   end
 
   add_index "documents", ["author_id"], name: "index_documents_on_author_id", using: :btree
+
+  create_table "reviews", force: true do |t|
+    t.text     "content"
+    t.integer  "reviewer_id"
+    t.integer  "document_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name",            null: false

@@ -1,0 +1,8 @@
+{{document-details document=model}}
+<h4>Reviews</h4>
+{{#each reviews}}
+    {{review-overview  review = this}}
+{{else}}
+    <p class="bg-info">No reviews to be found!</p>
+{{/each}}
+

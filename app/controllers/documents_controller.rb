@@ -2,7 +2,7 @@ class DocumentsController < ApplicationController
 
 
   def show
-    render json: Document.all
+    render json: Document.all, each_serializer: DocumentSerializer
   end
 
   def create
@@ -16,6 +16,10 @@ class DocumentsController < ApplicationController
   end
 
 
+
+  def index
+    render json: User.all, each_serializer: UserSerializer
+  end
 
   private
 

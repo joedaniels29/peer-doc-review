@@ -10,9 +10,15 @@ window.App.Router.map ->
 
   this.resource 'authenticated', ->
     @resource 'user',path:'/user/:user_id', ->
-        @resource 'documents', ->
+    @resource 'documents', path:'/documents', ->
+
+      @route 'new'
+      @resource 'document', path:"/:document_id", ->
+        @resource 'reviews', path:'/reviews', ->
           @route 'new'
-        @resource 'document', path:'/document/:user_id'
+          @resource 'review', path:"/:review_id", ->
+
+
 
 
 
