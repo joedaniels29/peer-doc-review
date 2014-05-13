@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-
-
-
+  skip_before_filter :authenticate, :only => :sign_in
 
   public
   # Returns list of users. This requires authorization
@@ -14,10 +12,9 @@ class UsersController < ApplicationController
     user = User.find_by_email(auth_params[:email_or_username]) || User.find_by_username(auth_params[:email_or_username])
 
     if user
-      render json:
-                 user, status: 200
+      render json:user, serializer:LoginSerializer, status: 200
     else
-      render json:{message: "Bad combination. Please try again"}, status:401
+      render json: {message: "Bad combination. Please try again"}, status: 401
     end
 
   end
@@ -30,7 +27,7 @@ class UsersController < ApplicationController
     if user
       render user, status: 200
     else
-      render json:{message: "Bad combination. Please try again"}, status:401
+      render json: {message: "Bad combination. Please try again"}, status: 401
     end
 
   end
@@ -49,6 +46,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def me
+    render json: current_user, status:200
+  end
+
   private
 
   # Strong Parameters (Rails 4)
@@ -56,7 +57,7 @@ class UsersController < ApplicationController
     params.require("user").permit(:name, :username, :email, :password, :password_confirmation)
   end
 
-    # Strong Parameters (Rails 4)
+  # Strong Parameters (Rails 4)
   def auth_params
     params.permit(:password, :email_or_username)
   end

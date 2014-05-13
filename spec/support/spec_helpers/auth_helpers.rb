@@ -1,6 +1,6 @@
 module AuthHelpers
   def authWithUser (user)
-    request.headers['X-ACCESS-TOKEN'] = "#{user.authentication_token}"
+    request.headers['X-ACCESS-TOKEN'] = "#{user.auth_token}"
   end
 
   def clearToken

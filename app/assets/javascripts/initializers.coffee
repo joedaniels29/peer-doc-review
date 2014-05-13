@@ -24,7 +24,9 @@ App.RailsAuthenticator = Ember.SimpleAuth.Authenticators.Base.extend(
         contentType: "application/json"
       ).then ((response) ->
         Ember.run ->
-          resolve token: response.auth_token
+          resolve
+            token: response.auth_token
+            account_id: response.id
           return
 
         return
@@ -48,13 +50,22 @@ App.RailsAuthenticator = Ember.SimpleAuth.Authenticators.Base.extend(
 
 # the custom authorizer that authorizes requests against the custom server
 App.RailsAuthorizer = Ember.SimpleAuth.Authorizers.Base.extend(authorize: (jqXHR, requestOptions) ->
-  jqXHR.setRequestHeader "Authorization", "Token: " + @get("session.token")  if @get("session.isAuthenticated") and not Ember.isEmpty(@get("session.token"))
+  jqXHR.setRequestHeader "Authorization", "Token token=\"#{@get("session.token")}\"" if @get("session.isAuthenticated") and not Ember.isEmpty(@get("session.token"))
   return
 )
 
 Ember.Application.initializer
   name: 'authentication',
   initialize: (container, application)->
+    # customize the session so that it allows access to the account object
+    Ember.SimpleAuth.Session.reopen({
+      account: (->
+        accountId = @get("content.account_id")
+        container.lookup("store:main").find "user", accountId  unless Ember.isEmpty(accountId)
+      ).property("content.account_id"),
+      account_id:null
+    })
+
     container.register('authorizer:custom', App.RailsAuthorizer);
     container.register('authenticator:custom', App.RailsAuthenticator);
     Ember.SimpleAuth.setup(container, application,

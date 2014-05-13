@@ -60,10 +60,9 @@ describe UsersController do
 
 
     describe 'with valid token', validToken: true do
-      before(:each) { authWithUser(user) }
-
-      it 'can upload a new Document' do
-        post 'create'
+      before(:each) do
+        authWithUser(user)
+        subject.should_receive(:authenticate).once
       end
 
       pending 'show my documents'
@@ -76,7 +75,7 @@ describe UsersController do
         it 'allows me to upload my response'
       end
 
-      context 'once I\'ve reviewed some work,' do
+      context 'once I\'ve reviewed some work,' doq
         pending 'shows reviews of my work with my first reviewing the work of someone else.'
       end
 

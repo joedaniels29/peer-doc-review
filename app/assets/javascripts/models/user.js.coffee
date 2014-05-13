@@ -1,9 +1,10 @@
 # for more details see: http://emberjs.com/guides/models/defining-models/
 
 App.User = DS.Model.extend
-  name: DS.attr(),
+  name: DS.attr('string'),
   email: DS.attr('string'),
   username: DS.attr('string'),
+  documents: DS.hasMany('document',{async: true}),
   errors: {}
 #  documents: DS.hasMany('document', {async: true})
 #  reviews_written: DS.hasMany('review', {async: true})

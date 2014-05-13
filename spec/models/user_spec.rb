@@ -22,7 +22,9 @@ describe User do
 
     end
 
-    it 'can have a document'
+    it 'can have a document' do
+      user.documents.create(attributes_for(:document))
+    end
 
     context 'with a document' do
       it 'can have a review'

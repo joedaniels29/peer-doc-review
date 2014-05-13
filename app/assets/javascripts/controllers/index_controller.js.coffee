@@ -3,7 +3,7 @@
 App.IndexController = Ember.Controller.extend({
   needs:['application'],
   person:( ->
-    @get('this.controllers.application.currentUser.firstName') ||"Stranger"
-  ).property('this.controllers.application.currentUser')
+    @get('controllers.application.user.name') ||"Stranger"
+  ).property('controllers.application.user.name')
 })
 

@@ -71,4 +71,4 @@ gem 'ember_simple_auth-rails'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 
 gem 'bcrypt'
-
+gem 'namey'
