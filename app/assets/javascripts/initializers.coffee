@@ -54,6 +54,8 @@ App.RailsAuthorizer = Ember.SimpleAuth.Authorizers.Base.extend(authorize: (jqXHR
   return
 )
 
+window.showdown = new Showdown.converter();
+
 Ember.Application.initializer
   name: 'authentication',
   initialize: (container, application)->
@@ -73,3 +75,8 @@ Ember.Application.initializer
       authorizerFactory: 'authorizer:custom',
       storeFactory: 'session-store:local-storage'
     )
+
+    Ember.Handlebars.helper "format-markdown", (input) ->
+      return ""  if input is `undefined`
+      new Handlebars.SafeString(showdown.makeHtml(input))
+

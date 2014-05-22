@@ -37,6 +37,12 @@
 
 
         <div class="form-group">
+            <label for="document_review" class="col-sm-2 control-label">Content Preview</label>
+            <div class="col-sm-9">
+                {{format-markdown model.content}}
+            </div>
+        </div>
+        <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-default" {{action 'createDocument'}}>Save Document</button>
             </div>
